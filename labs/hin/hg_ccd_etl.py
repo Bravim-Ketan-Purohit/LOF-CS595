@@ -1,5 +1,7 @@
 import csv
 import json
+import sys
+import os
 
 import requests
 from fhirclient import client
@@ -10,6 +12,7 @@ from fhirclient.models.extension import Extension
 from fhirclient.models.fhirdatetime import FHIRDateTime
 from fhirclient.models.fhirreference import FHIRReference
 
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), './../..')))
 from labs.ccd.services.ccd_services import CCDServices
 from lof.services import HealthGorillaTokenService
 
